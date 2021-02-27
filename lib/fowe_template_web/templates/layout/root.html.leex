@@ -11,19 +11,14 @@
   </head>
   <body>
     <header>
-      <section class="container">
-        <nav role="navigation">
-          <ul>
-            <li><a href="https://hexdocs.pm/phoenix/overview.html">Get Started</a></li>
-            <%= if function_exported?(Routes, :live_dashboard_path, 2) do %>
-              <li><%= link "LiveDashboard", to: Routes.live_dashboard_path(@conn, :home) %></li>
-            <% end %>
-          </ul>
-        </nav>
-        <a href="https://phoenixframework.org/" class="phx-logo">
-          <img src="<%= Routes.static_path(@conn, "/images/phoenix.png") %>" alt="Phoenix Framework Logo"/>
-        </a>
-      </section>
+      <nav class="flex justify-between p-8 items-center mb-16">
+        <a href="#" class="font-sans text-black text-sm md:text-4xl font-thin">FOWE Template</a>
+        <ul class="list-reset flex">
+          <li><a href="#" class="text-black p-2 md:p-4">Home</a></li>
+          <li><a href="#" class="text-black p-2 md:p-4 whitespace-no-wrap">About Us</a></li>
+          <li><a href="#" class="text-blackp-2 md:p-4">Contact</a></li>
+        </ul>
+      </nav>
     </header>
     <%= @inner_content %>
   </body>
