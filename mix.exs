@@ -46,7 +46,10 @@ defmodule FoweTemplate.MixProject do
       {:telemetry_poller, "~> 0.4"},
       {:gettext, "~> 0.11"},
       {:jason, "~> 1.0"},
-      {:plug_cowboy, "~> 2.0"}
+      {:plug_cowboy, "~> 2.0"},
+      {:bamboo, "~> 2.0.0"},
+      {:bamboo_phoenix, "~> 1.0.0"},
+      {:wallaby, "~> 0.28.0", runtime: false, only: :test}
     ]
   end
 

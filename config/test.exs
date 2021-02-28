@@ -16,7 +16,10 @@ config :fowe_template, FoweTemplate.Repo,
 # you can enable the server option below.
 config :fowe_template, FoweTemplateWeb.Endpoint,
   http: [port: 4002],
-  server: false
+  server: false,
+  server: true
 
 # Print only warnings and errors during test
 config :logger, level: :warn
+
+config :fowe_template, :sql_sandbox, true
