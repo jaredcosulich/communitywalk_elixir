@@ -10,7 +10,8 @@ defmodule FoweTemplate.MixProject do
       compilers: [:phoenix, :gettext] ++ Mix.compilers(),
       start_permanent: Mix.env() == :prod,
       aliases: aliases(),
-      deps: deps()
+      deps: deps(),
+      dialyzer: [plt_add_deps: :transitive]
     ]
   end
 
@@ -49,7 +50,9 @@ defmodule FoweTemplate.MixProject do
       {:plug_cowboy, "~> 2.0"},
       {:bamboo, "~> 2.0.0"},
       {:bamboo_phoenix, "~> 1.0.0"},
-      {:wallaby, "~> 0.28.0", runtime: false, only: :test}
+      {:wallaby, "~> 0.28.0", runtime: false, only: :test},
+      {:credo, "~> 1.4", only: [:dev, :test], runtime: false},
+      {:dialyxir, "~> 1.0", only: [:dev], runtime: false}
     ]
   end
 

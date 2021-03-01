@@ -1,4 +1,8 @@
 defmodule FoweTemplateWeb.PageLive do
+  @moduledoc """
+  The front page.
+  """
+
   use FoweTemplateWeb, :live_view
 
   @impl true

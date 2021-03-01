@@ -1,4 +1,8 @@
 defmodule FoweTemplateWeb.Telemetry do
+  @moduledoc """
+  For recording measurements of the apps behavior?
+  """
+
   use Supervisor
   import Telemetry.Metrics
 
