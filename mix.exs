@@ -52,7 +52,7 @@ defmodule FoweTemplate.MixProject do
       {:bamboo_phoenix, "~> 1.0.0"},
       {:wallaby, "~> 0.28.0", runtime: false, only: :test},
       {:credo, "~> 1.4", only: [:dev, :test], runtime: false},
-      {:dialyxir, "~> 1.0", only: [:dev], runtime: false}
+      {:dialyxir, "~> 1.0", only: [:dev, :test], runtime: false}
     ]
   end
 
