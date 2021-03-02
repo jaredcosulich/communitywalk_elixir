@@ -62,6 +62,7 @@ jobs:
         run: mix test
 
       - name: Retrieve PLT Cache
+        if: false
         uses: actions/cache@v1
         id: plt-cache
         with:
@@ -75,4 +76,5 @@ jobs:
           mix dialyzer --plt
 
       - name: Run dialyzer
+        if: false
         run: mix dialyzer --no-check --halt-exit-status
