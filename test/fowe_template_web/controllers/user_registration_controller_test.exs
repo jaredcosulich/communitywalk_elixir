@@ -7,7 +7,10 @@ defmodule FoweTemplateWeb.UserRegistrationControllerTest do
     test "renders registration page", %{conn: conn} do
       conn = get(conn, Routes.user_registration_path(conn, :new))
       response = html_response(conn, 200)
-      assert response =~ "<h1>Register</h1>"
+
+      assert response =~
+               "<h1 class=\"block w-full text-center text-grey-darkest mb-6\">Register</h1>"
+
       assert response =~ "Log in</a>"
       assert response =~ "Register</a>"
     end
@@ -46,7 +49,10 @@ defmodule FoweTemplateWeb.UserRegistrationControllerTest do
         })
 
       response = html_response(conn, 200)
-      assert response =~ "<h1>Register</h1>"
+
+      assert response =~
+               "<h1 class=\"block w-full text-center text-grey-darkest mb-6\">Register</h1>"
+
       assert response =~ "must have the @ sign and no spaces"
       assert response =~ "should be at least 12 character"
     end
