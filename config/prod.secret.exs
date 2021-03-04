@@ -30,6 +30,14 @@ config :fowe_template, FoweTemplateWeb.Endpoint,
   ],
   secret_key_base: secret_key_base
 
+sendgrid_api_key =
+  System.get_env("SENDGRID_API_KEY") ||
+    raise("Environment variable SENDGRID_API_KEY is missing.")
+
+config :fowe_template, FoweTemplate.Mailer,
+  adapter: Bamboo.SendGridAdapter,
+  api_key: sendgrid_api_key
+
 # ## Using releases (Elixir v1.9+)
 #
 # If you are doing OTP releases, you need to instruct Phoenix

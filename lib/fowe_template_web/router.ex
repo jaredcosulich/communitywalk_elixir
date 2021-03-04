@@ -23,6 +23,11 @@ defmodule FoweTemplateWeb.Router do
     live "/", PageLive, :index
   end
 
+  if Mix.env() == :dev do
+    # If using Phoenix
+    forward "/sent_emails", Bamboo.SentEmailViewerPlug
+  end
+
   # Other scopes may use custom stacks.
   # scope "/api", FoweTemplateWeb do
   #   pipe_through :api

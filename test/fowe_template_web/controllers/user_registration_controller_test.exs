@@ -9,7 +9,7 @@ defmodule FoweTemplateWeb.UserRegistrationControllerTest do
       response = html_response(conn, 200)
 
       assert response =~
-               "<h1 class=\"block w-full text-center text-grey-darkest mb-6\">Register</h1>"
+               "Register</h1>"
 
       assert response =~ "Log in</a>"
       assert response =~ "Register</a>"
@@ -51,7 +51,7 @@ defmodule FoweTemplateWeb.UserRegistrationControllerTest do
       response = html_response(conn, 200)
 
       assert response =~
-               "<h1 class=\"block w-full text-center text-grey-darkest mb-6\">Register</h1>"
+               "Register</h1>"
 
       assert response =~ "must have the @ sign and no spaces"
       assert response =~ "should be at least 12 character"
