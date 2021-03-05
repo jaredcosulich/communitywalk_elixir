@@ -11,9 +11,6 @@ jobs:
 
     runs-on: ubuntu-latest
 
-    env:
-      SENDGRID_API_KEY: ${{ secrets.SENDGRID_API_KEY }}
-
     steps:
       - uses: actions/checkout@v2
         with:
@@ -31,3 +28,5 @@ jobs:
           GIGALIXIR_APP: fowe # Feel free to also put this in your secrets
           SSH_PRIVATE_KEY: ${{ secrets.SSH_PRIVATE_KEY }}
           MIGRATIONS: false # defaults to true
+        env:
+          SENDGRID_API_KEY: ${{ secrets.SENDGRID_API_KEY }}
