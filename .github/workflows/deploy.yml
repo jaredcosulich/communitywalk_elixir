@@ -11,6 +11,9 @@ jobs:
 
     runs-on: ubuntu-latest
 
+    env:
+      SENDGRID_API_KEY: ${{ secrets.SENDGRID_API_KEY }}
+
     steps:
       - uses: actions/checkout@v2
         with:
@@ -23,7 +26,6 @@ jobs:
 
       - uses: mhanberg/gigalixir-action@v0.4.0
         with:
-          SENDGRID_API_KEY: ${{ secrets.SENDGRID_API_KEY }}
           GIGALIXIR_USERNAME: ${{ secrets.GIGALIXIR_USERNAME }}
           GIGALIXIR_PASSWORD: ${{ secrets.GIGALIXIR_PASSWORD }}
           GIGALIXIR_APP: fowe # Feel free to also put this in your secrets
