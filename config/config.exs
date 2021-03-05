@@ -26,8 +26,7 @@ config :logger, :console,
 # Use Jason for JSON parsing in Phoenix
 config :phoenix, :json_library, Jason
 
-config :wallaby, driver: Wallaby.Chrome
-config :wallaby, otp_app: :fowe_template
+config :fowe_template, FoweTemplate.Mailer, adapter: Bamboo.LocalAdapter
 
 # Import environment specific config. This must remain at the bottom
 # of this file so it overrides the configuration defined above.

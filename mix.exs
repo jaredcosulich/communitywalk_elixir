@@ -34,6 +34,7 @@ defmodule FoweTemplate.MixProject do
   # Type `mix help deps` for examples and options.
   defp deps do
     [
+      {:bcrypt_elixir, "~> 2.0"},
       {:phoenix, "~> 1.5.7"},
       {:phoenix_ecto, "~> 4.1"},
       {:ecto_sql, "~> 3.4"},
@@ -50,7 +51,8 @@ defmodule FoweTemplate.MixProject do
       {:plug_cowboy, "~> 2.0"},
       {:bamboo, "~> 2.0.0"},
       {:bamboo_phoenix, "~> 1.0.0"},
-      {:wallaby, "~> 0.28.0", runtime: false, only: :test},
+      {:phx_gen_auth, "~> 0.6", only: [:dev], runtime: false},
+      {:wallaby, "~> 0.28.0", only: [:test], runtime: false},
       {:credo, "~> 1.4", only: [:dev, :test], runtime: false},
       {:dialyxir, "~> 1.0", only: [:dev, :test], runtime: false}
     ]
