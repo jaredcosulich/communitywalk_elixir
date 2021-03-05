@@ -4,8 +4,8 @@ defmodule FoweTemplate.Accounts do
   """
 
   import Ecto.Query, warn: false
+  alias FoweTemplate.Accounts.{User, UserNotifier, UserToken}
   alias FoweTemplate.Repo
-  alias FoweTemplate.Accounts.{User, UserToken, UserNotifier}
 
   ## Database getters
 
