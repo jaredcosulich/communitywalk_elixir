@@ -10,7 +10,8 @@ use Mix.Config
 # which you should run after static files are built and
 # before starting your production server.
 config :fowe_template, FoweTemplateWeb.Endpoint,
-  url: [host: "example.com", port: 80],
+  url: [host: "fowe.gigalixirapp.com", port: 443],
+  force_ssl: [rewrite_on: [:x_forwarded_proto]]
   pool_size: 2,
   cache_static_manifest: "priv/static/cache_manifest.json"
 
