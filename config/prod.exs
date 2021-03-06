@@ -11,7 +11,7 @@ use Mix.Config
 # before starting your production server.
 config :fowe_template, FoweTemplateWeb.Endpoint,
   url: [host: "fowe.gigalixirapp.com", port: 443],
-  force_ssl: [rewrite_on: [:x_forwarded_proto]]
+  force_ssl: [rewrite_on: [:x_forwarded_proto]],
   pool_size: 2,
   cache_static_manifest: "priv/static/cache_manifest.json"
 
