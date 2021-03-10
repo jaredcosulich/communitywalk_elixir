@@ -1,4 +1,4 @@
-defmodule FoweTemplate.Email do
+defmodule Upward.Email do
   @moduledoc """
   Functions to generate emails.
   """

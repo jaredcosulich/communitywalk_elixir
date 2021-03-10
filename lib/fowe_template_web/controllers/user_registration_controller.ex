@@ -1,9 +1,9 @@
-defmodule FoweTemplateWeb.UserRegistrationController do
-  use FoweTemplateWeb, :controller
+defmodule UpwardWeb.UserRegistrationController do
+  use UpwardWeb, :controller
 
-  alias FoweTemplate.Accounts
-  alias FoweTemplate.Accounts.User
-  alias FoweTemplateWeb.UserAuth
+  alias Upward.Accounts
+  alias Upward.Accounts.User
+  alias UpwardWeb.UserAuth
 
   def new(conn, _params) do
     changeset = Accounts.change_user_registration(%User{})

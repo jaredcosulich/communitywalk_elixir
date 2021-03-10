@@ -1,7 +1,7 @@
-defmodule FoweTemplateWeb.UserResetPasswordController do
-  use FoweTemplateWeb, :controller
+defmodule UpwardWeb.UserResetPasswordController do
+  use UpwardWeb, :controller
 
-  alias FoweTemplate.Accounts
+  alias Upward.Accounts
 
   plug :get_user_by_reset_password_token when action in [:edit, :update]
 

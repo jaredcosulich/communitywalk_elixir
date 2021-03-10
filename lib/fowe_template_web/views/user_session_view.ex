@@ -1,3 +1,3 @@
-defmodule FoweTemplateWeb.UserSessionView do
-  use FoweTemplateWeb, :view
+defmodule UpwardWeb.UserSessionView do
+  use UpwardWeb, :view
 end

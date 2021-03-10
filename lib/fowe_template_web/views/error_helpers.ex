@@ -1,4 +1,4 @@
-defmodule FoweTemplateWeb.ErrorHelpers do
+defmodule UpwardWeb.ErrorHelpers do
   @moduledoc """
   Conveniences for translating and building error messages.
   """
@@ -39,9 +39,9 @@ defmodule FoweTemplateWeb.ErrorHelpers do
     # should be written to the errors.po file. The :count option is
     # set by Ecto and indicates we should also apply plural rules.
     if count = opts[:count] do
-      Gettext.dngettext(FoweTemplateWeb.Gettext, "errors", msg, msg, count, opts)
+      Gettext.dngettext(UpwardWeb.Gettext, "errors", msg, msg, count, opts)
     else
-      Gettext.dgettext(FoweTemplateWeb.Gettext, "errors", msg, opts)
+      Gettext.dgettext(UpwardWeb.Gettext, "errors", msg, opts)
     end
   end
 end

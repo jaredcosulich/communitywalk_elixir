@@ -1,3 +1,3 @@
-defmodule FoweTemplateWeb.LayoutView do
-  use FoweTemplateWeb, :view
+defmodule UpwardWeb.LayoutView do
+  use UpwardWeb, :view
 end

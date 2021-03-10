@@ -1,8 +1,8 @@
-defmodule FoweTemplateWeb.UserSessionController do
-  use FoweTemplateWeb, :controller
+defmodule UpwardWeb.UserSessionController do
+  use UpwardWeb, :controller
 
-  alias FoweTemplate.Accounts
-  alias FoweTemplateWeb.UserAuth
+  alias Upward.Accounts
+  alias UpwardWeb.UserAuth
 
   def new(conn, _params) do
     render(conn, "new.html", error_message: nil)

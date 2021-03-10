@@ -1,9 +1,9 @@
-defmodule FoweTemplateWeb.PageLive do
+defmodule UpwardWeb.PageLive do
   @moduledoc """
   The front page.
   """
 
-  use FoweTemplateWeb, :live_view
+  use UpwardWeb, :live_view
 
   @impl true
   def mount(_params, _session, socket) do

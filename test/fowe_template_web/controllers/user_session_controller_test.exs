@@ -1,7 +1,7 @@
-defmodule FoweTemplateWeb.UserSessionControllerTest do
-  use FoweTemplateWeb.ConnCase, async: true
+defmodule UpwardWeb.UserSessionControllerTest do
+  use UpwardWeb.ConnCase, async: true
 
-  import FoweTemplate.AccountsFixtures
+  import Upward.AccountsFixtures
 
   setup do
     %{user: user_fixture()}
@@ -50,7 +50,7 @@ defmodule FoweTemplateWeb.UserSessionControllerTest do
           }
         })
 
-      assert conn.resp_cookies["_fowe_template_web_user_remember_me"]
+      assert conn.resp_cookies["_upward_web_user_remember_me"]
       assert redirected_to(conn) =~ "/"
     end
 

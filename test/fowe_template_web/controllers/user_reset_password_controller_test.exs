@@ -1,9 +1,9 @@
-defmodule FoweTemplateWeb.UserResetPasswordControllerTest do
-  use FoweTemplateWeb.ConnCase, async: true
+defmodule UpwardWeb.UserResetPasswordControllerTest do
+  use UpwardWeb.ConnCase, async: true
 
-  alias FoweTemplate.Accounts
-  alias FoweTemplate.Repo
-  import FoweTemplate.AccountsFixtures
+  alias Upward.Accounts
+  alias Upward.Repo
+  import Upward.AccountsFixtures
 
   setup do
     %{user: user_fixture()}

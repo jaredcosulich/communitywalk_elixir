@@ -1,4 +1,4 @@
-defmodule FoweTemplateWeb.Telemetry do
+defmodule UpwardWeb.Telemetry do
   @moduledoc """
   For recording measurements of the apps behavior?
   """
@@ -35,11 +35,11 @@ defmodule FoweTemplateWeb.Telemetry do
       ),
 
       # Database Metrics
-      summary("fowe_template.repo.query.total_time", unit: {:native, :millisecond}),
-      summary("fowe_template.repo.query.decode_time", unit: {:native, :millisecond}),
-      summary("fowe_template.repo.query.query_time", unit: {:native, :millisecond}),
-      summary("fowe_template.repo.query.queue_time", unit: {:native, :millisecond}),
-      summary("fowe_template.repo.query.idle_time", unit: {:native, :millisecond}),
+      summary("upward.repo.query.total_time", unit: {:native, :millisecond}),
+      summary("upward.repo.query.decode_time", unit: {:native, :millisecond}),
+      summary("upward.repo.query.query_time", unit: {:native, :millisecond}),
+      summary("upward.repo.query.queue_time", unit: {:native, :millisecond}),
+      summary("upward.repo.query.idle_time", unit: {:native, :millisecond}),
 
       # VM Metrics
       summary("vm.memory.total", unit: {:byte, :kilobyte}),
@@ -53,7 +53,7 @@ defmodule FoweTemplateWeb.Telemetry do
     [
       # A module, function and arguments to be invoked periodically.
       # This function must call :telemetry.execute/3 and a metric must be added above.
-      # {FoweTemplateWeb, :count_users, []}
+      # {UpwardWeb, :count_users, []}
     ]
   end
 end

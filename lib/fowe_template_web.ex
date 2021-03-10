@@ -1,12 +1,12 @@
-defmodule FoweTemplateWeb do
+defmodule UpwardWeb do
   @moduledoc """
   The entrypoint for defining your web interface, such
   as controllers, views, channels and so on.
 
   This can be used in your application as:
 
-      use FoweTemplateWeb, :controller
-      use FoweTemplateWeb, :view
+      use UpwardWeb, :controller
+      use UpwardWeb, :view
 
   The definitions below will be executed for every view,
   controller, etc, so keep them short and clean, focused
@@ -19,19 +19,19 @@ defmodule FoweTemplateWeb do
 
   def controller do
     quote do
-      use Phoenix.Controller, namespace: FoweTemplateWeb
+      use Phoenix.Controller, namespace: UpwardWeb
 
       import Plug.Conn
-      import FoweTemplateWeb.Gettext
-      alias FoweTemplateWeb.Router.Helpers, as: Routes
+      import UpwardWeb.Gettext
+      alias UpwardWeb.Router.Helpers, as: Routes
     end
   end
 
   def view do
     quote do
       use Phoenix.View,
-        root: "lib/fowe_template_web/templates",
-        namespace: FoweTemplateWeb
+        root: "lib/upward_web/templates",
+        namespace: UpwardWeb
 
       # Import convenience functions from controllers
       import Phoenix.Controller,
@@ -45,7 +45,7 @@ defmodule FoweTemplateWeb do
   def live_view do
     quote do
       use Phoenix.LiveView,
-        layout: {FoweTemplateWeb.LayoutView, "live.html"}
+        layout: {UpwardWeb.LayoutView, "live.html"}
 
       unquote(view_helpers())
     end
@@ -72,7 +72,7 @@ defmodule FoweTemplateWeb do
   def channel do
     quote do
       use Phoenix.Channel
-      import FoweTemplateWeb.Gettext
+      import UpwardWeb.Gettext
     end
   end
 
@@ -87,9 +87,9 @@ defmodule FoweTemplateWeb do
       # Import basic rendering functionality (render, render_layout, etc)
       import Phoenix.View
 
-      import FoweTemplateWeb.ErrorHelpers
-      import FoweTemplateWeb.Gettext
-      alias FoweTemplateWeb.Router.Helpers, as: Routes
+      import UpwardWeb.ErrorHelpers
+      import UpwardWeb.Gettext
+      alias UpwardWeb.Router.Helpers, as: Routes
     end
   end
 

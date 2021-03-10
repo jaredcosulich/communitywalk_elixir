@@ -1,9 +1,9 @@
-defmodule FoweTemplate.AccountsTest do
-  use FoweTemplate.DataCase
+defmodule Upward.AccountsTest do
+  use Upward.DataCase
 
-  alias FoweTemplate.Accounts
-  import FoweTemplate.AccountsFixtures
-  alias FoweTemplate.Accounts.{User, UserToken}
+  alias Upward.Accounts
+  import Upward.AccountsFixtures
+  alias Upward.Accounts.{User, UserToken}
 
   describe "get_user_by_email/1" do
     test "does not return the user if the email does not exist" do

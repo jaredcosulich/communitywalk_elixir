@@ -1,4 +1,4 @@
-defmodule FoweTemplate.Repo.Migrations.CreateUsersAuthTables do
+defmodule Upward.Repo.Migrations.CreateUsersAuthTables do
   use Ecto.Migration
 
   def change do

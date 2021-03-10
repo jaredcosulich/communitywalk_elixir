@@ -1,3 +1,3 @@
-defmodule FoweTemplateWeb.UserSettingsView do
-  use FoweTemplateWeb, :view
+defmodule UpwardWeb.UserSettingsView do
+  use UpwardWeb, :view
 end
