@@ -1,13 +1,13 @@
-defmodule FoweTemplateWeb.Router do
-  use FoweTemplateWeb, :router
+defmodule UpwardWeb.Router do
+  use UpwardWeb, :router
 
-  import FoweTemplateWeb.UserAuth
+  import UpwardWeb.UserAuth
 
   pipeline :browser do
     plug :accepts, ["html"]
     plug :fetch_session
     plug :fetch_live_flash
-    plug :put_root_layout, {FoweTemplateWeb.LayoutView, :root}
+    plug :put_root_layout, {UpwardWeb.LayoutView, :root}
     plug :protect_from_forgery
     plug :put_secure_browser_headers
     plug :fetch_current_user
@@ -17,7 +17,7 @@ defmodule FoweTemplateWeb.Router do
     plug :accepts, ["json"]
   end
 
-  scope "/", FoweTemplateWeb do
+  scope "/", UpwardWeb do
     pipe_through :browser
 
     live "/", PageLive, :index
@@ -29,7 +29,7 @@ defmodule FoweTemplateWeb.Router do
   end
 
   # Other scopes may use custom stacks.
-  # scope "/api", FoweTemplateWeb do
+  # scope "/api", UpwardWeb do
   #   pipe_through :api
   # end
 
@@ -45,13 +45,13 @@ defmodule FoweTemplateWeb.Router do
 
     scope "/" do
       pipe_through :browser
-      live_dashboard "/dashboard", metrics: FoweTemplateWeb.Telemetry
+      live_dashboard "/dashboard", metrics: UpwardWeb.Telemetry
     end
   end
 
   ## Authentication routes
 
-  scope "/", FoweTemplateWeb do
+  scope "/", UpwardWeb do
     pipe_through [:browser, :redirect_if_user_is_authenticated]
 
     get "/users/register", UserRegistrationController, :new
@@ -64,7 +64,7 @@ defmodule FoweTemplateWeb.Router do
     put "/users/reset_password/:token", UserResetPasswordController, :update
   end
 
-  scope "/", FoweTemplateWeb do
+  scope "/", UpwardWeb do
     pipe_through [:browser, :require_authenticated_user]
 
     get "/users/settings", UserSettingsController, :edit
@@ -72,7 +72,7 @@ defmodule FoweTemplateWeb.Router do
     get "/users/settings/confirm_email/:token", UserSettingsController, :confirm_email
   end
 
-  scope "/", FoweTemplateWeb do
+  scope "/", UpwardWeb do
     pipe_through [:browser]
 
     delete "/users/log_out", UserSessionController, :delete

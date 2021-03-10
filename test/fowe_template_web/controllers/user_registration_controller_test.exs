@@ -1,7 +1,7 @@
-defmodule FoweTemplateWeb.UserRegistrationControllerTest do
-  use FoweTemplateWeb.ConnCase, async: true
+defmodule UpwardWeb.UserRegistrationControllerTest do
+  use UpwardWeb.ConnCase, async: true
 
-  import FoweTemplate.AccountsFixtures
+  import Upward.AccountsFixtures
 
   describe "GET /users/register" do
     test "renders registration page", %{conn: conn} do

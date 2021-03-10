@@ -1,5 +1,5 @@
-defmodule FoweTemplateWeb.LayoutViewTest do
-  use FoweTemplateWeb.ConnCase, async: true
+defmodule UpwardWeb.LayoutViewTest do
+  use UpwardWeb.ConnCase, async: true
 
   # When testing helpers, you may want to import Phoenix.HTML and
   # use functions such as safe_to_string() to convert the helper

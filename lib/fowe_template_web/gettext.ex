@@ -1,11 +1,11 @@
-defmodule FoweTemplateWeb.Gettext do
+defmodule UpwardWeb.Gettext do
   @moduledoc """
   A module providing Internationalization with a gettext-based API.
 
   By using [Gettext](https://hexdocs.pm/gettext),
   your module gains a set of macros for translations, for example:
 
-      import FoweTemplateWeb.Gettext
+      import UpwardWeb.Gettext
 
       # Simple translation
       gettext("Here is the string to translate")
@@ -20,5 +20,5 @@ defmodule FoweTemplateWeb.Gettext do
 
   See the [Gettext Docs](https://hexdocs.pm/gettext) for detailed usage.
   """
-  use Gettext, otp_app: :fowe_template
+  use Gettext, otp_app: :upward
 end

@@ -1,8 +1,8 @@
-defmodule FoweTemplateWeb.UserSocket do
+defmodule UpwardWeb.UserSocket do
   use Phoenix.Socket
 
   ## Channels
-  # channel "room:*", FoweTemplateWeb.RoomChannel
+  # channel "room:*", UpwardWeb.RoomChannel
 
   # Socket params are passed from the client and can
   # be used to verify and authenticate a user. After
@@ -27,7 +27,7 @@ defmodule FoweTemplateWeb.UserSocket do
   # Would allow you to broadcast a "disconnect" event and terminate
   # all active sockets and channels for a given user:
   #
-  #     FoweTemplateWeb.Endpoint.broadcast("user_socket:#{user.id}", "disconnect", %{})
+  #     UpwardWeb.Endpoint.broadcast("user_socket:#{user.id}", "disconnect", %{})
   #
   # Returning `nil` makes this socket anonymous.
   @impl true

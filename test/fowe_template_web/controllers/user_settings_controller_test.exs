@@ -1,8 +1,8 @@
-defmodule FoweTemplateWeb.UserSettingsControllerTest do
-  use FoweTemplateWeb.ConnCase, async: true
+defmodule UpwardWeb.UserSettingsControllerTest do
+  use UpwardWeb.ConnCase, async: true
 
-  alias FoweTemplate.Accounts
-  import FoweTemplate.AccountsFixtures
+  alias Upward.Accounts
+  import Upward.AccountsFixtures
 
   setup :register_and_log_in_user
 

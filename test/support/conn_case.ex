@@ -1,4 +1,4 @@
-defmodule FoweTemplateWeb.ConnCase do
+defmodule UpwardWeb.ConnCase do
   @moduledoc """
   This module defines the test case to be used by
   tests that require setting up a connection.
@@ -11,26 +11,26 @@ defmodule FoweTemplateWeb.ConnCase do
   we enable the SQL sandbox, so changes done to the database
   are reverted at the end of every test. If you are using
   PostgreSQL, you can even run database tests asynchronously
-  by setting `use FoweTemplateWeb.ConnCase, async: true`, although
+  by setting `use UpwardWeb.ConnCase, async: true`, although
   this option is not recommended for other databases.
   """
 
   use ExUnit.CaseTemplate
 
   alias Ecto.Adapters.SQL.Sandbox
-  alias FoweTemplate.Repo
+  alias Upward.Repo
 
   using do
     quote do
       # Import conveniences for testing with connections
       import Plug.Conn
       import Phoenix.ConnTest
-      import FoweTemplateWeb.ConnCase
+      import UpwardWeb.ConnCase
 
-      alias FoweTemplateWeb.Router.Helpers, as: Routes
+      alias UpwardWeb.Router.Helpers, as: Routes
 
       # The default endpoint for testing
-      @endpoint FoweTemplateWeb.Endpoint
+      @endpoint UpwardWeb.Endpoint
     end
   end
 
@@ -53,7 +53,7 @@ defmodule FoweTemplateWeb.ConnCase do
   test context.
   """
   def register_and_log_in_user(%{conn: conn}) do
-    user = FoweTemplate.AccountsFixtures.user_fixture()
+    user = Upward.AccountsFixtures.user_fixture()
     %{conn: log_in_user(conn, user), user: user}
   end
 
@@ -63,7 +63,7 @@ defmodule FoweTemplateWeb.ConnCase do
   It returns an updated `conn`.
   """
   def log_in_user(conn, user) do
-    token = FoweTemplate.Accounts.generate_user_session_token(user)
+    token = Upward.Accounts.generate_user_session_token(user)
 
     conn
     |> Phoenix.ConnTest.init_test_session(%{})

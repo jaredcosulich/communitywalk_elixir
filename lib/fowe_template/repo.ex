@@ -1,5 +1,5 @@
-defmodule FoweTemplate.Repo do
+defmodule Upward.Repo do
   use Ecto.Repo,
-    otp_app: :fowe_template,
+    otp_app: :upward,
     adapter: Ecto.Adapters.Postgres
 end

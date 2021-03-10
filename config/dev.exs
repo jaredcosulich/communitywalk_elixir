@@ -1,10 +1,10 @@
 use Mix.Config
 
 # Configure your database
-config :fowe_template, FoweTemplate.Repo,
+config :upward, Upward.Repo,
   username: "postgres",
   password: "postgres",
-  database: "fowe_template_dev",
+  database: "upward_dev",
   hostname: "localhost",
   show_sensitive_data_on_connection_error: true,
   pool_size: 10
@@ -15,7 +15,7 @@ config :fowe_template, FoweTemplate.Repo,
 # The watchers configuration can be used to run external
 # watchers to your application. For example, we use it
 # with webpack to recompile .js and .css sources.
-config :fowe_template, FoweTemplateWeb.Endpoint,
+config :upward, UpwardWeb.Endpoint,
   http: [port: 4000],
   debug_errors: true,
   code_reloader: true,
@@ -55,13 +55,13 @@ config :fowe_template, FoweTemplateWeb.Endpoint,
 # different ports.
 
 # Watch static and templates for browser reloading.
-config :fowe_template, FoweTemplateWeb.Endpoint,
+config :upward, UpwardWeb.Endpoint,
   live_reload: [
     patterns: [
       ~r"priv/static/.*(js|css|png|jpeg|jpg|gif|svg)$",
       ~r"priv/gettext/.*(po)$",
-      ~r"lib/fowe_template_web/(live|views)/.*(ex)$",
-      ~r"lib/fowe_template_web/templates/.*(eex)$"
+      ~r"lib/upward_web/(live|views)/.*(ex)$",
+      ~r"lib/upward_web/templates/.*(eex)$"
     ]
   ]
 
