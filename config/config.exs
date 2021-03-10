@@ -7,15 +7,15 @@
 # General application configuration
 use Mix.Config
 
-config :upward,
-  ecto_repos: [Upward.Repo]
+config :fowe_template,
+  ecto_repos: [FoweTemplate.Repo]
 
 # Configures the endpoint
-config :upward, UpwardWeb.Endpoint,
+config :fowe_template, FoweTemplateWeb.Endpoint,
   url: [host: "localhost"],
   secret_key_base: "qvAV3WO2nQklv6+5lfZ+Prv5VCU7riC71MpZBDIG0Ruql2YMatx5CG3BwPa1PeB5",
-  render_errors: [view: UpwardWeb.ErrorView, accepts: ~w(html json), layout: false],
-  pubsub_server: Upward.PubSub,
+  render_errors: [view: FoweTemplateWeb.ErrorView, accepts: ~w(html json), layout: false],
+  pubsub_server: FoweTemplate.PubSub,
   live_view: [signing_salt: "RNeFXrKI"]
 
 # Configures Elixir's Logger
@@ -26,7 +26,7 @@ config :logger, :console,
 # Use Jason for JSON parsing in Phoenix
 config :phoenix, :json_library, Jason
 
-config :upward, Upward.Mailer, adapter: Bamboo.LocalAdapter
+config :fowe_template, FoweTemplate.Mailer, adapter: Bamboo.LocalAdapter
 
 # Import environment specific config. This must remain at the bottom
 # of this file so it overrides the configuration defined above.

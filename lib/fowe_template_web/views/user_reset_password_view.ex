@@ -1,3 +1,3 @@
-defmodule UpwardWeb.UserResetPasswordView do
-  use UpwardWeb, :view
+defmodule FoweTemplateWeb.UserResetPasswordView do
+  use FoweTemplateWeb, :view
 end

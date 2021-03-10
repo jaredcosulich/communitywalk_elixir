@@ -1,3 +1,3 @@
-defmodule UpwardWeb.UserConfirmationView do
-  use UpwardWeb, :view
+defmodule FoweTemplateWeb.UserConfirmationView do
+  use FoweTemplateWeb, :view
 end

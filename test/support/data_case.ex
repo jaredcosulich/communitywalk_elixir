@@ -1,4 +1,4 @@
-defmodule Upward.DataCase do
+defmodule FoweTemplate.DataCase do
   @moduledoc """
   This module defines the setup for tests requiring
   access to the application's data layer.
@@ -10,7 +10,7 @@ defmodule Upward.DataCase do
   we enable the SQL sandbox, so changes done to the database
   are reverted at the end of every test. If you are using
   PostgreSQL, you can even run database tests asynchronously
-  by setting `use Upward.DataCase, async: true`, although
+  by setting `use FoweTemplate.DataCase, async: true`, although
   this option is not recommended for other databases.
   """
 
@@ -18,16 +18,16 @@ defmodule Upward.DataCase do
 
   alias Ecto.Adapters.SQL.Sandbox
   alias Ecto.Changeset
-  alias Upward.Repo
+  alias FoweTemplate.Repo
 
   using do
     quote do
-      alias Upward.Repo
+      alias FoweTemplate.Repo
 
       import Ecto
       import Ecto.Changeset
       import Ecto.Query
-      import Upward.DataCase
+      import FoweTemplate.DataCase
     end
   end
 

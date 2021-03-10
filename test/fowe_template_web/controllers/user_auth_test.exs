@@ -1,16 +1,16 @@
-defmodule UpwardWeb.UserAuthTest do
-  use UpwardWeb.ConnCase, async: true
+defmodule FoweTemplateWeb.UserAuthTest do
+  use FoweTemplateWeb.ConnCase, async: true
 
-  alias Upward.Accounts
-  alias UpwardWeb.UserAuth
-  import Upward.AccountsFixtures
+  alias FoweTemplate.Accounts
+  alias FoweTemplateWeb.UserAuth
+  import FoweTemplate.AccountsFixtures
 
-  @remember_me_cookie "_upward_web_user_remember_me"
+  @remember_me_cookie "_fowe_template_web_user_remember_me"
 
   setup %{conn: conn} do
     conn =
       conn
-      |> Map.replace!(:secret_key_base, UpwardWeb.Endpoint.config(:secret_key_base))
+      |> Map.replace!(:secret_key_base, FoweTemplateWeb.Endpoint.config(:secret_key_base))
       |> init_test_session(%{})
 
     %{user: user_fixture(), conn: conn}
@@ -65,7 +65,7 @@ defmodule UpwardWeb.UserAuthTest do
 
     test "broadcasts to the given live_socket_id", %{conn: conn} do
       live_socket_id = "users_sessions:abcdef-token"
-      UpwardWeb.Endpoint.subscribe(live_socket_id)
+      FoweTemplateWeb.Endpoint.subscribe(live_socket_id)
 
       conn
       |> put_session(:live_socket_id, live_socket_id)

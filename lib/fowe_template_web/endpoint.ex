@@ -1,7 +1,7 @@
-defmodule UpwardWeb.Endpoint do
-  use Phoenix.Endpoint, otp_app: :upward
+defmodule FoweTemplateWeb.Endpoint do
+  use Phoenix.Endpoint, otp_app: :fowe_template
 
-  if Application.get_env(:upward, :sql_sandbox) do
+  if Application.get_env(:fowe_template, :sql_sandbox) do
     plug Phoenix.Ecto.SQL.Sandbox
   end
 
@@ -10,11 +10,11 @@ defmodule UpwardWeb.Endpoint do
   # Set :encryption_salt if you would also like to encrypt it.
   @session_options [
     store: :cookie,
-    key: "_upward_key",
+    key: "_fowe_template_key",
     signing_salt: "VZzYUuZ7"
   ]
 
-  socket "/socket", UpwardWeb.UserSocket,
+  socket "/socket", FoweTemplateWeb.UserSocket,
     websocket: true,
     longpoll: false
 
@@ -26,7 +26,7 @@ defmodule UpwardWeb.Endpoint do
   # when deploying your static files in production.
   plug Plug.Static,
     at: "/",
-    from: :upward,
+    from: :fowe_template,
     gzip: false,
     only: ~w(css fonts images js favicon.ico robots.txt)
 
@@ -36,7 +36,7 @@ defmodule UpwardWeb.Endpoint do
     socket "/phoenix/live_reload/socket", Phoenix.LiveReloader.Socket
     plug Phoenix.LiveReloader
     plug Phoenix.CodeReloader
-    plug Phoenix.Ecto.CheckRepoStatus, otp_app: :upward
+    plug Phoenix.Ecto.CheckRepoStatus, otp_app: :fowe_template
   end
 
   plug Phoenix.LiveDashboard.RequestLogger,
@@ -54,5 +54,5 @@ defmodule UpwardWeb.Endpoint do
   plug Plug.MethodOverride
   plug Plug.Head
   plug Plug.Session, @session_options
-  plug UpwardWeb.Router
+  plug FoweTemplateWeb.Router
 end

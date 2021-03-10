@@ -1,12 +1,12 @@
-defmodule UpwardWeb do
+defmodule FoweTemplateWeb do
   @moduledoc """
   The entrypoint for defining your web interface, such
   as controllers, views, channels and so on.
 
   This can be used in your application as:
 
-      use UpwardWeb, :controller
-      use UpwardWeb, :view
+      use FoweTemplateWeb, :controller
+      use FoweTemplateWeb, :view
 
   The definitions below will be executed for every view,
   controller, etc, so keep them short and clean, focused
@@ -19,19 +19,19 @@ defmodule UpwardWeb do
 
   def controller do
     quote do
-      use Phoenix.Controller, namespace: UpwardWeb
+      use Phoenix.Controller, namespace: FoweTemplateWeb
 
       import Plug.Conn
-      import UpwardWeb.Gettext
-      alias UpwardWeb.Router.Helpers, as: Routes
+      import FoweTemplateWeb.Gettext
+      alias FoweTemplateWeb.Router.Helpers, as: Routes
     end
   end
 
   def view do
     quote do
       use Phoenix.View,
-        root: "lib/upward_web/templates",
-        namespace: UpwardWeb
+        root: "lib/fowe_template_web/templates",
+        namespace: FoweTemplateWeb
 
       # Import convenience functions from controllers
       import Phoenix.Controller,
@@ -45,7 +45,7 @@ defmodule UpwardWeb do
   def live_view do
     quote do
       use Phoenix.LiveView,
-        layout: {UpwardWeb.LayoutView, "live.html"}
+        layout: {FoweTemplateWeb.LayoutView, "live.html"}
 
       unquote(view_helpers())
     end
@@ -72,7 +72,7 @@ defmodule UpwardWeb do
   def channel do
     quote do
       use Phoenix.Channel
-      import UpwardWeb.Gettext
+      import FoweTemplateWeb.Gettext
     end
   end
 
@@ -87,9 +87,9 @@ defmodule UpwardWeb do
       # Import basic rendering functionality (render, render_layout, etc)
       import Phoenix.View
 
-      import UpwardWeb.ErrorHelpers
-      import UpwardWeb.Gettext
-      alias UpwardWeb.Router.Helpers, as: Routes
+      import FoweTemplateWeb.ErrorHelpers
+      import FoweTemplateWeb.Gettext
+      alias FoweTemplateWeb.Router.Helpers, as: Routes
     end
   end
 

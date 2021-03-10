@@ -1,7 +1,7 @@
-defmodule Upward.AccountsFixtures do
+defmodule FoweTemplate.AccountsFixtures do
   @moduledoc """
   This module defines test helpers for creating
-  entities via the `Upward.Accounts` context.
+  entities via the `FoweTemplate.Accounts` context.
   """
 
   def unique_user_email, do: "user#{System.unique_integer()}@example.com"
@@ -14,7 +14,7 @@ defmodule Upward.AccountsFixtures do
         email: unique_user_email(),
         password: valid_user_password()
       })
-      |> Upward.Accounts.register_user()
+      |> FoweTemplate.Accounts.register_user()
 
     user
   end

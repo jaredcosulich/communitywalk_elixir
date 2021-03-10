@@ -1,4 +1,4 @@
-defmodule Upward.Application do
+defmodule FoweTemplate.Application do
   # See https://hexdocs.pm/elixir/Application.html
   # for more information on OTP Applications
   @moduledoc false
@@ -8,27 +8,27 @@ defmodule Upward.Application do
   def start(_type, _args) do
     children = [
       # Start the Ecto repository
-      Upward.Repo,
+      FoweTemplate.Repo,
       # Start the Telemetry supervisor
-      UpwardWeb.Telemetry,
+      FoweTemplateWeb.Telemetry,
       # Start the PubSub system
-      {Phoenix.PubSub, name: Upward.PubSub},
+      {Phoenix.PubSub, name: FoweTemplate.PubSub},
       # Start the Endpoint (http/https)
-      UpwardWeb.Endpoint
-      # Start a worker by calling: Upward.Worker.start_link(arg)
-      # {Upward.Worker, arg}
+      FoweTemplateWeb.Endpoint
+      # Start a worker by calling: FoweTemplate.Worker.start_link(arg)
+      # {FoweTemplate.Worker, arg}
     ]
 
     # See https://hexdocs.pm/elixir/Supervisor.html
     # for other strategies and supported options
-    opts = [strategy: :one_for_one, name: Upward.Supervisor]
+    opts = [strategy: :one_for_one, name: FoweTemplate.Supervisor]
     Supervisor.start_link(children, opts)
   end
 
   # Tell Phoenix to update the endpoint configuration
   # whenever the application is updated.
   def config_change(changed, _new, removed) do
-    UpwardWeb.Endpoint.config_change(changed, removed)
+    FoweTemplateWeb.Endpoint.config_change(changed, removed)
     :ok
   end
 end

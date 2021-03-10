@@ -1,3 +1,3 @@
-defmodule UpwardWeb.UserRegistrationView do
-  use UpwardWeb, :view
+defmodule FoweTemplateWeb.UserRegistrationView do
+  use FoweTemplateWeb, :view
 end

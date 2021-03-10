@@ -1,5 +1,5 @@
-defmodule UpwardWeb.ErrorView do
-  use UpwardWeb, :view
+defmodule FoweTemplateWeb.ErrorView do
+  use FoweTemplateWeb, :view
 
   # If you want to customize a particular status code
   # for a certain format, you may uncomment below.

@@ -1,11 +1,11 @@
-defmodule Upward.Accounts do
+defmodule FoweTemplate.Accounts do
   @moduledoc """
   The Accounts context.
   """
 
   import Ecto.Query, warn: false
-  alias Upward.Accounts.{User, UserNotifier, UserToken}
-  alias Upward.Repo
+  alias FoweTemplate.Accounts.{User, UserNotifier, UserToken}
+  alias FoweTemplate.Repo
 
   ## Database getters
 

@@ -1,9 +1,9 @@
-defmodule Upward.MixProject do
+defmodule FoweTemplate.MixProject do
   use Mix.Project
 
   def project do
     [
-      app: :upward,
+      app: :fowe_template,
       version: "0.1.0",
       elixir: "~> 1.7",
       elixirc_paths: elixirc_paths(Mix.env()),
@@ -20,7 +20,7 @@ defmodule Upward.MixProject do
   # Type `mix help compile.app` for more information.
   def application do
     [
-      mod: {Upward.Application, []},
+      mod: {FoweTemplate.Application, []},
       extra_applications: [:logger, :runtime_tools]
     ]
   end

@@ -1,6 +1,6 @@
-defmodule Upward do
+defmodule FoweTemplate do
   @moduledoc """
-  Upward keeps the contexts that define your domain
+  FoweTemplate keeps the contexts that define your domain
   and business logic.
 
   Contexts are also responsible for managing your data, regardless

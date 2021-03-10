@@ -1,8 +1,8 @@
-defmodule UpwardWeb.UserSettingsController do
-  use UpwardWeb, :controller
+defmodule FoweTemplateWeb.UserSettingsController do
+  use FoweTemplateWeb, :controller
 
-  alias Upward.Accounts
-  alias UpwardWeb.UserAuth
+  alias FoweTemplate.Accounts
+  alias FoweTemplateWeb.UserAuth
 
   plug :assign_email_and_password_changesets
 

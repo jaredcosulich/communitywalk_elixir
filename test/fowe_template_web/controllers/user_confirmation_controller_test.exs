@@ -1,9 +1,9 @@
-defmodule UpwardWeb.UserConfirmationControllerTest do
-  use UpwardWeb.ConnCase, async: true
+defmodule FoweTemplateWeb.UserConfirmationControllerTest do
+  use FoweTemplateWeb.ConnCase, async: true
 
-  alias Upward.Accounts
-  alias Upward.Repo
-  import Upward.AccountsFixtures
+  alias FoweTemplate.Accounts
+  alias FoweTemplate.Repo
+  import FoweTemplate.AccountsFixtures
 
   setup do
     %{user: user_fixture()}

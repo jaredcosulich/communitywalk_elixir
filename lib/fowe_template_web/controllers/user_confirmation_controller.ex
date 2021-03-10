@@ -1,7 +1,7 @@
-defmodule UpwardWeb.UserConfirmationController do
-  use UpwardWeb, :controller
+defmodule FoweTemplateWeb.UserConfirmationController do
+  use FoweTemplateWeb, :controller
 
-  alias Upward.Accounts
+  alias FoweTemplate.Accounts
 
   def new(conn, _params) do
     render(conn, "new.html")

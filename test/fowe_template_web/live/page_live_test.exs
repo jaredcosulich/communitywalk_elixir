@@ -1,5 +1,5 @@
-defmodule UpwardWeb.PageLiveTest do
-  use UpwardWeb.ConnCase
+defmodule FoweTemplateWeb.PageLiveTest do
+  use FoweTemplateWeb.ConnCase
 
   import Phoenix.LiveViewTest
 

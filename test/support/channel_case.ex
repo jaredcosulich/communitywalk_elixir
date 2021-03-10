@@ -1,4 +1,4 @@
-defmodule UpwardWeb.ChannelCase do
+defmodule FoweTemplateWeb.ChannelCase do
   @moduledoc """
   This module defines the test case to be used by
   channel tests.
@@ -11,22 +11,22 @@ defmodule UpwardWeb.ChannelCase do
   we enable the SQL sandbox, so changes done to the database
   are reverted at the end of every test. If you are using
   PostgreSQL, you can even run database tests asynchronously
-  by setting `use UpwardWeb.ChannelCase, async: true`, although
+  by setting `use FoweTemplateWeb.ChannelCase, async: true`, although
   this option is not recommended for other databases.
   """
 
   use ExUnit.CaseTemplate
   alias Ecto.Adapters.SQL.Sandbox
-  alias Upward.Repo
+  alias FoweTemplate.Repo
 
   using do
     quote do
       # Import conveniences for testing with channels
       import Phoenix.ChannelTest
-      import UpwardWeb.ChannelCase
+      import FoweTemplateWeb.ChannelCase
 
       # The default endpoint for testing
-      @endpoint UpwardWeb.Endpoint
+      @endpoint FoweTemplateWeb.Endpoint
     end
   end
 
